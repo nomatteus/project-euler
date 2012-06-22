@@ -5,9 +5,8 @@ def is_palindrome_number(num):
 
 assert True == is_palindrome_number(1)
 assert True == is_palindrome_number(12321)
-assert False == is_palindrome_number(3232)
-assert False == is_palindrome_number(33322)
 assert True == is_palindrome_number(99999)
+assert False == is_palindrome_number(33322)
 
 
 def get_palindromes():
@@ -15,12 +14,9 @@ def get_palindromes():
     for i in range(999, 99, -1):
         for j in range(999, 99, -1):
             if is_palindrome_number(i * j):
-                # print "Found palindrome %s = %s * %s" % \
-                #       (i * j, i, j)
                 palindromes.append((i * j, i, j))
     return palindromes
 
-palindromes = get_palindromes()
-palindromes.sort(reverse=True)
+highest = max(get_palindromes())
 
-print "Answer to problem 4 is: %s" % str(palindromes[0])
+print "Answer to problem 4 is: %s" % highest[0]
