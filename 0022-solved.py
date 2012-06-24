@@ -20,7 +20,7 @@ def alpha_value(char):
     Returns the alphabetical value for a character.
     i.e. A=1, C=3, Z26
     """
-    return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".index(char.upper()) + 1
+    return ord(char.upper()) - 64
 
 assert 1 == alpha_value('a')
 assert 3 == alpha_value('c')
@@ -60,3 +60,6 @@ if __name__ == '__main__':
         score = alph_list_position * name_value(name)
         total_score += score
     print "The answer is %s" % total_score
+
+# Now that I know the answer, assert it to ensure correct refactoring
+assert 871198282 == total_score
