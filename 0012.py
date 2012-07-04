@@ -90,6 +90,6 @@ def problem_12(start_search, end_search):
 
 # Tweak the parameters when searching for the answer, unless you want to
 # run all the numbers every time!
-answer = problem_12(10200, 20000)
+answer = problem_12(12300, 15000)
 
 print "The answer is %s" % answer
